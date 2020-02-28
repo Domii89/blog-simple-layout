@@ -1,0 +1,65 @@
+body {
+    margin: 30px;
+    background-color: #BEE5F4;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: #000;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 300px 300px 100px;
+    grid-template-areas: 
+        "sidebar-1 content sidebar-2"
+        "sidebar-1 content sidebar-2"
+        "footer footer footer"
+}
+
+.logo {
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.menu {
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.content {
+    grid-area: content;
+}
+
+.sidebar1 {
+    grid-area: sidebar-1;
+    align-items: center;
+}
+
+.sidebar2 {
+    grid-area: sidebar-2;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.item {
+    display: grid;
+    background-color: #F3E4EA;
+    border: 2px solid #EBC0CF;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-areas:
+            "content content content"
+            "sidebar-1 sidebar-1 sidebar-2"
+            "footer footer footer"
+    }
+}
